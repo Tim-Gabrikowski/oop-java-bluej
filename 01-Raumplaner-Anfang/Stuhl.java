@@ -36,6 +36,22 @@ public class Stuhl
         breite = 40;
         tiefe  = 40;
     }
+    /**
+     * Creates a new Chair given the position, orientation and color
+     * @param x The X Position to spawn the Chair
+     * @param y The Y Position to spawn the Chair
+     * @param orientation The Orientation to spawn the Chair in
+     * @param color The Color of the Chair
+     */
+    public Stuhl(int x, int y, int orientation, String color) {
+        xPosition = x;
+        yPosition = y;
+        orientierung = orientation;
+        farbe = color;
+        istSichtbar = false;
+        breite = 120;
+        tiefe = 100;
+    }
     
     /**
      * Berechnet das zu zeichnende Shape anhand der gegebenen Daten

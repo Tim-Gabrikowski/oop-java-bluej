@@ -118,9 +118,9 @@ public class Leinwand
   }
 
   /**
-   * Zeichne f�r das gegebene Figur-Objekt eine Java-Figur (einen Shape)
+   * Zeichne fuer das gegebene Figur-Objekt eine Java-Figur (einen Shape)
    * auf die Leinwand.
-   * @param  figur  das Figur-Objekt, f�r das ein Shape gezeichnet
+   * @param  figur  das Figur-Objekt, fuer das ein Shape gezeichnet
    *                 werden soll
    * @param  farbe  die Farbe der Figur
    * @param  shape  ein Objekt der Klasse Shape, das tats�chlich

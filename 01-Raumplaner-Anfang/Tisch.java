@@ -18,12 +18,9 @@ public class Tisch
     private boolean istSichtbar;
     private int breite;
     private int tiefe;
+    private String name;
+    private int preis;
     
-    
-    /**
-     * Erzeuge einen neuen Stuhl mit einer Standardfarbe und Standardgroesse
-     * an einer Standardposition. (Standardkonstruktor)
-     */
     public Tisch()  {
         xPosition = 120;
         yPosition = 150;
@@ -32,6 +29,34 @@ public class Tisch
         istSichtbar = false;
         breite = 120;
         tiefe  = 100;
+        name = "Helgoland";
+        preis = 199;
+    }
+    /**
+     * Creates a new Table given the position, orientation and color
+     * @param x The X Position to spawn the Table
+     * @param y The Y Position to spawn the Table
+     * @param orientation The Orientation to spawn the Table in
+     * @param color The Color of the Table
+     */
+    public Tisch(int x, int y, int orientation, String color, String newName) {
+        xPosition = x;
+        yPosition = y;
+        orientierung = orientation;
+        farbe = color;
+        istSichtbar = false;
+        breite = 120;
+        tiefe = 100;
+        name = newName;
+        preis = 199;
+    }
+    
+    public String getName() {
+        return name;
+    }
+    
+    public void setName(String newName) {
+        name = newName;
     }
     
     /**
@@ -86,6 +111,13 @@ public class Tisch
     public void bewegeHorizontal(int entfernung) {
         loesche();
         xPosition += entfernung;
+        zeichne();
+    }
+    
+    public void bewege (int x, int y) {
+        loesche();
+        xPosition += x;
+        yPosition += y;
         zeichne();
     }
     
