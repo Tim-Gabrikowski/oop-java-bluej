@@ -54,7 +54,7 @@ public class Leinwand
     if (leinwandSingleton == null)
     {
       leinwandSingleton =
-        new Leinwand("M�belprojekt Grafik", 400, 400, Color.white);
+        new Leinwand("M�belprojekt Grafik", 800, 800, Color.white);
     }
     leinwandSingleton.setzeSichtbarkeit(true);
     return leinwandSingleton;
