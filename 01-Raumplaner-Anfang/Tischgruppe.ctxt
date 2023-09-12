@@ -4,4 +4,6 @@ comment0.text=\n\ A\ collection\ of\ a\ Table\ and\ 4\ Chairs\n\ \n\ @author\ Ti
 comment1.params=
 comment1.target=Tischgruppe()
 comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Tischgruppe\n
-numComments=2
+comment2.params=
+comment2.target=void\ show()
+numComments=3

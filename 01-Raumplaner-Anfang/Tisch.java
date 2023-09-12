@@ -32,13 +32,19 @@ public class Tisch
         name = "Helgoland";
         preis = 199;
     }
-    /**
-     * Creates a new Table given the position, orientation and color
-     * @param x The X Position to spawn the Table
-     * @param y The Y Position to spawn the Table
-     * @param orientation The Orientation to spawn the Table in
-     * @param color The Color of the Table
-     */
+    
+    public Tisch(int x, int y, int o)  {
+        xPosition = x;
+        yPosition = y;
+        orientierung = 0;
+        farbe = "rot";
+        istSichtbar = false;
+        breite = 120;
+        tiefe  = 100;
+        name = "Helgoland";
+        preis = 199;
+    }
+    
     public Tisch(int x, int y, int orientation, String color, String newName) {
         xPosition = x;
         yPosition = y;

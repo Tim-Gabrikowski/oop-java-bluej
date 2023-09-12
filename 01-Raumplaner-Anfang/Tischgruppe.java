@@ -20,10 +20,20 @@ public class Tischgruppe
     public Tischgruppe()
     {
         // initialise instance variables
-        c1 = new Stuhl();
-        c2 = new Stuhl();
-        c3 = new Stuhl();
-        c4 = new Stuhl();
-        t1 = new Tisch();
+        c1 = new Stuhl(50, 130, -90);
+        c2 = new Stuhl(140, 50, 0);
+        c3 = new Stuhl(230, 130, 90);
+        c4 = new Stuhl(140, 210, 180);
+        t1 = new Tisch(100, 100, 0);
+        
+        this.show();
+    }
+    
+    public void show(){
+        c1.zeige();
+        c2.zeige();
+        c3.zeige();
+        c4.zeige();
+        t1.zeige();
     }
 }

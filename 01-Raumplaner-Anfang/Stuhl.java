@@ -36,6 +36,15 @@ public class Stuhl
         breite = 40;
         tiefe  = 40;
     }
+    public Stuhl(int x, int y, int o) {
+        xPosition = x;
+        yPosition = y;
+        farbe = "blau";
+        orientierung = o;
+        istSichtbar = false;
+        breite = 40;
+        tiefe  = 40;
+    }
     /**
      * Creates a new Chair given the position, orientation and color
      * @param x The X Position to spawn the Chair
