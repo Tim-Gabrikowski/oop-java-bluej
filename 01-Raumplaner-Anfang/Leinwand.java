@@ -34,13 +34,6 @@ import javax.swing.JPanel;
  */
 public class Leinwand
 {
-  // Hinweis: Die Implementierung dieser Klasse (insbesondere die
-  // Verwaltung der Farben und Identit�ten der Figuren) ist etwas
-  // komplizierter als notwendig. Dies ist absichtlich so, weil damit 
-  // die Schnittstellen und Exemplarvariablen der Figuren-Klassen
-  // f�r den Lernanspruch dieses Projekts einfacher und klarer
-  // sein k�nnen.
-
   private static Leinwand leinwandSingleton;
 
   /**
@@ -54,7 +47,7 @@ public class Leinwand
     if (leinwandSingleton == null)
     {
       leinwandSingleton =
-        new Leinwand("M�belprojekt Grafik", 800, 800, Color.white);
+        new Leinwand("M�belprojekt Grafik", 800, 800, Color.white, 100);
     }
     leinwandSingleton.setzeSichtbarkeit(true);
     return leinwandSingleton;
@@ -68,16 +61,14 @@ public class Leinwand
   private Color hintergrundfarbe;
   private Image leinwandImage;
   private List figuren;
-  private Map figurZuShape; // Abbildung von Figuren zu Shapes
+  private Map figurZuShape;
+  private Grid grid;// Abbildung von Figuren zu Shapes
 
-  /**
-   * Erzeuge eine Leinwand.
-   * @param titel  Titel, der im Rahmen der Leinwand angezeigt wird
-   * @param breite  die gew�nschte Breite der Leinwand
-   * @param hoehe  die gew�nschte H�he der Leinwand
-   * @param grundfarbe die Hintergrundfarbe der Leinwand
-   */
-  private Leinwand(String titel, int breite, int hoehe, Color grundfarbe)
+  public Grid getGrid(){
+      return grid;
+  }
+  
+  private Leinwand(String titel, int breite, int hoehe, Color grundfarbe, int units)
   {
     fenster = new JFrame();
     zeichenflaeche = new Zeichenflaeche();
@@ -88,19 +79,11 @@ public class Leinwand
     fenster.pack();
     figuren = new ArrayList();
     figurZuShape = new HashMap();
+    grid = new Grid(breite, hoehe, units);
 
 }
 
 
-  /**
-   * Setze, ob diese Leinwand sichtbar sein soll oder nicht. Wenn die
-   * Leinwand sichtbar gemacht wird, wird ihr Fenster in den
-   * Vordergrund geholt. Diese Operation kann auch benutzt werden, um 
-   * ein bereits sichtbares Leinwandfenster in den Vordergrund (vor
-   * andere Fenster) zu holen.
-   * @param sichtbar boolean f�r die gew�nschte Sichtbarkeit: 
-   * true f�r sichtbar, false f�r nicht sichtbar.
-   */
   public void setzeSichtbarkeit(boolean sichtbar)
   {
     if (graphic == null)
@@ -117,15 +100,7 @@ public class Leinwand
     fenster.setVisible(sichtbar);
   }
 
-  /**
-   * Zeichne fuer das gegebene Figur-Objekt eine Java-Figur (einen Shape)
-   * auf die Leinwand.
-   * @param  figur  das Figur-Objekt, fuer das ein Shape gezeichnet
-   *                 werden soll
-   * @param  farbe  die Farbe der Figur
-   * @param  shape  ein Objekt der Klasse Shape, das tats�chlich
-   *                 gezeichnet wird
-   */
+  
   public void zeichne(Object figur, String farbe, Shape shape)
   {
     figuren.remove(figur); // entfernen, falls schon eingetragen
@@ -134,10 +109,6 @@ public class Leinwand
     erneutZeichnen();
   }
 
-  /**
-   * Entferne die gegebene Figur von der Leinwand.
-   * @param  figur  die Figur, deren Shape entfernt werden soll
-   */
   public void entferne(Object figur)
   {
     figuren.remove(figur); // entfernen,falls schon eingetragen
@@ -145,10 +116,6 @@ public class Leinwand
     erneutZeichnen();
   }
 
-  /**
-   * Setze die Zeichenfarbe der Leinwand.
-   * @param  farbname der Name der neuen Zeichenfarbe.
-   */
   public void setzeZeichenfarbe(String farbname)
   {
     if (farbname.equals("rot"))
@@ -169,12 +136,6 @@ public class Leinwand
       graphic.setColor(Color.black);
   }
 
-  /**
-   * Warte f�r die angegebenen Millisekunden.
-   * Mit dieser Operation wird eine Verz�gerung definiert, die
-   * f�r animierte Zeichnungen benutzt werden kann.
-   * @param  millisekunden die zu wartenden Millisekunden
-   */
   public void warte(int millisekunden)
   {
     try
@@ -187,9 +148,6 @@ public class Leinwand
     }
   }
 
-  /**
-   * Zeichne erneut alle Figuren auf der Leinwand.
-   */
   private void erneutZeichnen()
   {
     loeschen();
@@ -200,9 +158,6 @@ public class Leinwand
     zeichenflaeche.repaint();
   }
 
-  /**
-   * L�sche die gesamte Leinwand.
-   */
   private void loeschen()
   {
     Color original = graphic.getColor();
