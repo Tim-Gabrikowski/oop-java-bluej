@@ -36,7 +36,7 @@ public class Tisch
     public Tisch(int x, int y, int o)  {
         xPosition = x;
         yPosition = y;
-        orientierung = 0;
+        orientierung = o;
         farbe = "rot";
         istSichtbar = false;
         breite = 120;
