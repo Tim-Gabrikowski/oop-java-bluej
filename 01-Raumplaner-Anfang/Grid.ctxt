@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Grid
+comment0.text=\n\ Write\ a\ description\ of\ class\ Grid\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=w\ h\ u
+comment1.target=Grid(int,\ int,\ int)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Grid\n
+comment2.params=uX
+comment2.target=int\ getX(int)
+comment3.params=uY
+comment3.target=int\ getY(int)
+numComments=4
