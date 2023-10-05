@@ -44,11 +44,13 @@ public class Tisch
         yPosition = Grid.getY(gy);
         xPosG = gx;
         yPosG = gy;
-        farbe = "blau";
         orientierung = 0;
+        farbe = "rot";
         istSichtbar = false;
-        breite = 40;
-        tiefe  = 40;        
+        breite = 120;
+        tiefe  = 100;
+        name = "Helgoland";
+        preis = 199;      
     }
     
     public Tisch(int x, int y, int o)  {

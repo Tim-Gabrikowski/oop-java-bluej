@@ -2,8 +2,8 @@
 /**
  * Write a description of class Grid here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Tim Gabrikowski
+ * @version 05.10.2023
  */
 public class Grid
 {
