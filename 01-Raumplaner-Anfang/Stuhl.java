@@ -16,6 +16,8 @@ public class Stuhl
 {
     private int xPosition;
     private int yPosition;
+    private int xPosG;
+    private int yPosG;
     private int orientierung;
     private String farbe;
     private boolean istSichtbar;
@@ -36,6 +38,23 @@ public class Stuhl
         breite = 40;
         tiefe  = 40;
     }
+    
+    /**
+     * Erzeuge einen neuen Stuhl mit einer Standardfarbe und Standardgroesse
+     * an einer angegebenen Position im Grid (Aufgabe 3.5)
+     */
+    public Stuhl(int gx, int gy){
+        xPosition = Grid.getX(gx);
+        yPosition = Grid.getY(gy);
+        xPosG = gx;
+        yPosG = gy;
+        farbe = "blau";
+        orientierung = 0;
+        istSichtbar = false;
+        breite = 40;
+        tiefe  = 40;        
+    }
+    
     public Stuhl(int x, int y, int o) {
         xPosition = x;
         yPosition = y;
@@ -119,6 +138,18 @@ public class Stuhl
     public void bewegeHorizontal(int entfernung) {
         loesche();
         xPosition += entfernung;
+        zeichne();
+    }
+    
+    /**
+     * Bewege dieses Objekt um dx und dy Rastereinheiten
+     */
+    public void move(int dx, int dy) {
+        xPosG += dx;
+        yPosG += dy;
+        
+        xPosition = Grid.getX(xPosG);
+        yPosition = Grid.getY(yPosG);
         zeichne();
     }
     

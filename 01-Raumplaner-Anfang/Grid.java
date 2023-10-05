@@ -7,24 +7,31 @@
  */
 public class Grid
 {
-    // instance variables - replace the example below with your own
-    private int cHeight;
-    private int cWidth;
-    private int unitSize;
+    // cHeight und cWidth sind Canvas größe
+    private static int cHeight = 100;
+    private static int cWidth = 100;
+    // die Rastergröße (in Pixeln)
+    private static int unitSize = 25;
 
-    /**
-     * Constructor for objects of class Grid
-     */
-    public Grid(int w, int h, int u)
-    {
-        cWidth = w;
+    public static void setParams(int w, int h, int u) {
         cHeight = h;
+        cWidth = w;
         unitSize = u;
     }
-    public int getX(int uX) {
+    /**
+     * @brief Calculate X position in Pixels given a x value in the grid
+     * @param uX X Position in Gridspace
+     * @return x Position in pixelspace
+     */
+    public static int getX(int uX) {
         return uX * unitSize;
     }
-    public int getY(int uY) {
+    /**
+     * @brief Calculate Y position in Pixels given a Y value in the grid
+     * @param uY Y Position in Gridspace
+     * @return y Position in pixelspace
+     */
+    public static int getY(int uY) {
         return uY * unitSize;
     }
 }

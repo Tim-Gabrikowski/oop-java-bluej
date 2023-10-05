@@ -61,12 +61,7 @@ public class Leinwand
   private Color hintergrundfarbe;
   private Image leinwandImage;
   private List figuren;
-  private Map figurZuShape;
-  private Grid grid;// Abbildung von Figuren zu Shapes
-
-  public Grid getGrid(){
-      return grid;
-  }
+  private Map figurZuShape;// Abbildung von Figuren zu Shapes
   
   private Leinwand(String titel, int breite, int hoehe, Color grundfarbe, int units)
   {
@@ -79,7 +74,8 @@ public class Leinwand
     fenster.pack();
     figuren = new ArrayList();
     figurZuShape = new HashMap();
-    grid = new Grid(breite, hoehe, units);
+    
+    Grid.setParams(breite, hoehe, units);
 
 }
 

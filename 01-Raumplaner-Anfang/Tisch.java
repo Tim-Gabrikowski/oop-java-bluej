@@ -13,6 +13,8 @@ public class Tisch
 {
     private int xPosition;
     private int yPosition;
+    private int xPosG;
+    private int yPosG;
     private int orientierung;
     private String farbe;
     private boolean istSichtbar;
@@ -31,6 +33,22 @@ public class Tisch
         tiefe  = 100;
         name = "Helgoland";
         preis = 199;
+    }
+    
+    /**
+     * Erzeuge einen neuen Tisch mit einer Standardfarbe und Standardgroesse
+     * an einer angegebenen Position im Grid (Aufgabe 3.5)
+     */
+    public Tisch(int gx, int gy){
+        xPosition = Grid.getX(gx);
+        yPosition = Grid.getY(gy);
+        xPosG = gx;
+        yPosG = gy;
+        farbe = "blau";
+        orientierung = 0;
+        istSichtbar = false;
+        breite = 40;
+        tiefe  = 40;        
     }
     
     public Tisch(int x, int y, int o)  {
@@ -124,6 +142,18 @@ public class Tisch
         loesche();
         xPosition += x;
         yPosition += y;
+        zeichne();
+    }
+    
+    /**
+     * Bewege dieses Objekt um dx und dy Rastereinheiten
+     */
+    public void move(int dx, int dy) {
+        xPosG += dx;
+        yPosG += dy;
+        
+        xPosition = Grid.getX(xPosG);
+        yPosition = Grid.getY(yPosG);
         zeichne();
     }
     
