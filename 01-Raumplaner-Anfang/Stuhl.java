@@ -37,6 +37,7 @@ public class Stuhl
         istSichtbar = false;
         breite = 40;
         tiefe  = 40;
+        
     }
     
     /**
@@ -44,6 +45,7 @@ public class Stuhl
      * an einer angegebenen Position im Grid (Aufgabe 3.5)
      */
     public Stuhl(int gx, int gy){
+        System.out.println("" + gx + " " + Grid.getX(gx) + " " + gy + " " + Grid.getY(gy));
         xPosition = Grid.getX(gx);
         yPosition = Grid.getY(gy);
         xPosG = gx;
@@ -105,6 +107,10 @@ public class Stuhl
         return  t.createTransformedShape(stuhl);
     }
     
+    public void inspect() {
+        System.out.println("Stuhl bei G" + xPosG + "|" + yPosG + " P" + xPosition + "|" + yPosition);
+    }
+    
     /**
      * Mache dieses Objekt sichtbar. Wenn es bereits sichtbar ist, tue nichts.
      */
@@ -145,6 +151,9 @@ public class Stuhl
      * Bewege dieses Objekt um dx und dy Rastereinheiten
      */
     public void move(int dx, int dy) {
+        boolean onCanvas = Grid.isOnCanvas(xPosG + dx, yPosG + dy);
+        if(!onCanvas) return;
+        
         xPosG += dx;
         yPosG += dy;
         

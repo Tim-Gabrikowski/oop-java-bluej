@@ -12,7 +12,7 @@ public class Grid
     private static int cWidth = 100;
     // die Rastergröße (in Pixeln)
     private static int unitSize = 25;
-
+    
     public static void setParams(int w, int h, int u) {
         cHeight = h;
         cWidth = w;
@@ -33,5 +33,8 @@ public class Grid
      */
     public static int getY(int uY) {
         return uY * unitSize;
+    }
+    public static boolean isOnCanvas(int gX, int gY) {
+        return (gX*unitSize <= cWidth) && (gY*unitSize <= cHeight) && (gX >= 0) && (gY >= 0);
     }
 }

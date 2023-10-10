@@ -8,5 +8,12 @@ comment2.target=int\ getX(int)
 comment2.text=\r\n\ @brief\ Calculate\ X\ position\ in\ Pixels\ given\ a\ x\ value\ in\ the\ grid\r\n\ @param\ uX\ X\ Position\ in\ Gridspace\r\n\ @return\ x\ Position\ in\ pixelspace\r\n
 comment3.params=uY
 comment3.target=int\ getY(int)
+<<<<<<< HEAD
 comment3.text=\r\n\ @brief\ Calculate\ Y\ position\ in\ Pixels\ given\ a\ Y\ value\ in\ the\ grid\r\n\ @param\ uY\ Y\ Position\ in\ Gridspace\r\n\ @return\ y\ Position\ in\ pixelspace\r\n
 numComments=4
+=======
+comment3.text=\n\ @brief\ Calculate\ Y\ position\ in\ Pixels\ given\ a\ Y\ value\ in\ the\ grid\n\ @param\ uY\ Y\ Position\ in\ Gridspace\n\ @return\ y\ Position\ in\ pixelspace\n
+comment4.params=gX\ gY
+comment4.target=boolean\ isOnCanvas(int,\ int)
+numComments=5
+>>>>>>> 59b6ace (3.5.2.4)

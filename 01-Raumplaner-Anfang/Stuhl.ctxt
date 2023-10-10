@@ -3,6 +3,7 @@ comment0.target=Stuhl
 comment0.text=\r\n\ Ein\ Stuhl,\ der\ manipuliert\ werden\ kann\ und\ sich\ selbst\ auf\ einer\ Leinwand\ zeichnet.\r\n\ \r\n\ @author\ Claus\ Albowski\r\n\ @version\ 2.2\ \ (aug\ 07)\r\n\ Tim\ was\ here\r\n\ And\ here\r\n
 comment1.params=
 comment1.target=Stuhl()
+<<<<<<< HEAD
 comment1.text=\r\n\ Erzeuge\ einen\ neuen\ Stuhl\ mit\ einer\ Standardfarbe\ und\ Standardgroesse\r\n\ an\ einer\ Standardposition.\ (Standardkonstruktor)\r\n
 comment10.params=dx\ dy
 comment10.target=void\ move(int,\ int)
@@ -19,6 +20,27 @@ comment13.text=\r\n\ Zeichne\ dieses\ Objekt\ mit\ seinen\ aktuellen\ Werten\ au
 comment14.params=
 comment14.target=void\ loesche()
 comment14.text=\r\n\ Loesche\ dieses\ Objekt\ vom\ Bildschirm.\r\n
+=======
+comment1.text=\n\ Erzeuge\ einen\ neuen\ Stuhl\ mit\ einer\ Standardfarbe\ und\ Standardgroesse\n\ an\ einer\ Standardposition.\ (Standardkonstruktor)\n
+comment10.params=entfernung
+comment10.target=void\ bewegeHorizontal(int)
+comment10.text=\n\ Bewege\ dieses\ Objekt\ horizontal\ um\ 'entfernung'\ Bildschirmpunkte.\n
+comment11.params=dx\ dy
+comment11.target=void\ move(int,\ int)
+comment11.text=\n\ Bewege\ dieses\ Objekt\ um\ dx\ und\ dy\ Rastereinheiten\n
+comment12.params=entfernung
+comment12.target=void\ bewegeVertikal(int)
+comment12.text=\n\ Bewege\ dieses\ objekt\ vertikal\ um\ 'entfernung'\ Bildschirmpunkte.\n
+comment13.params=neueFarbe
+comment13.target=void\ aendereFarbe(java.lang.String)
+comment13.text=\n\ Aendere\ die\ Farbe\ dieses\ Objektes\ in\ 'neueFarbe'.\n\ Gueltige\ Angaben\ sind\ "rot",\ "gelb",\ "blau",\ "gruen",\n\ "lila"\ und\ "schwarz".\n
+comment14.params=
+comment14.target=void\ zeichne()
+comment14.text=\n\ Zeichne\ dieses\ Objekt\ mit\ seinen\ aktuellen\ Werten\ auf\ den\ Bildschirm.\n
+comment15.params=
+comment15.target=void\ loesche()
+comment15.text=\n\ Loesche\ dieses\ Objekt\ vom\ Bildschirm.\n
+>>>>>>> 59b6ace (3.5.2.4)
 comment2.params=gx\ gy
 comment2.target=Stuhl(int,\ int)
 comment2.text=\r\n\ Erzeuge\ einen\ neuen\ Stuhl\ mit\ einer\ Standardfarbe\ und\ Standardgroesse\r\n\ an\ einer\ angegebenen\ Position\ im\ Grid\ (Aufgabe\ 3.5)\r\n
@@ -31,6 +53,7 @@ comment5.params=
 comment5.target=java.awt.Shape\ gibAktuelleFigur()
 comment5.text=\r\n\ Berechnet\ das\ zu\ zeichnende\ Shape\ anhand\ der\ gegebenen\ Daten\r\n\ [\ Zum\ Anzeigen\ der\ Attributwerte\ ueber\ Inspect\ muss\ hier\ die\ Sichtbarkeit\ \r\n\ \ auf\ public\ gesetzt\ werden.\ ]\r\n
 comment6.params=
+<<<<<<< HEAD
 comment6.target=void\ zeige()
 comment6.text=\r\n\ Mache\ dieses\ Objekt\ sichtbar.\ Wenn\ es\ bereits\ sichtbar\ ist,\ tue\ nichts.\r\n
 comment7.params=
@@ -43,3 +66,16 @@ comment9.params=entfernung
 comment9.target=void\ bewegeHorizontal(int)
 comment9.text=\r\n\ Bewege\ dieses\ Objekt\ horizontal\ um\ 'entfernung'\ Bildschirmpunkte.\r\n
 numComments=15
+=======
+comment6.target=void\ inspect()
+comment7.params=
+comment7.target=void\ zeige()
+comment7.text=\n\ Mache\ dieses\ Objekt\ sichtbar.\ Wenn\ es\ bereits\ sichtbar\ ist,\ tue\ nichts.\n
+comment8.params=
+comment8.target=void\ verberge()
+comment8.text=\n\ Mache\ dieses\ Objekt\ unsichtbar.\ Wenn\ es\ bereits\ unsichtbar\ ist,\ tue\ nichts.\n
+comment9.params=neuerWinkel
+comment9.target=void\ dreheAuf(int)
+comment9.text=\n\ Drehe\ auf\ den\ angegebenen\ Winkel\n
+numComments=16
+>>>>>>> 59b6ace (3.5.2.4)
