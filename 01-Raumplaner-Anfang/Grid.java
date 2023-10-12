@@ -34,7 +34,27 @@ public class Grid
     public static int getY(int uY) {
         return uY * unitSize;
     }
+    
     public static boolean isOnCanvas(int gX, int gY) {
         return (gX*unitSize <= cWidth) && (gY*unitSize <= cHeight) && (gX >= 0) && (gY >= 0);
+    }
+    
+    public static int lerpGridX(int s, int e, float t) {      
+        // calculate the pixel Xs      
+        int pS = s * unitSize;
+        int pE = e * unitSize;
+        // calculate delta
+        int delta = pE-pS;
+        // to now get the point we need to find the delta from the start at a given t
+        return pS + Math.round(delta * t);
+    }
+    public static int lerpGridY(int s, int e, float t) {
+        // calculate the pixel Xs      
+        int pS = s * unitSize;
+        int pE = e * unitSize;
+        // calculate delta
+        int delta = pE-pS;
+        // to now get the point we need to find the delta from the start at a given t
+        return pS + Math.round(delta * t);
     }
 }

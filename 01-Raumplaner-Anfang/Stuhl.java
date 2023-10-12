@@ -3,7 +3,6 @@ import java.awt.geom.GeneralPath;
 import java.awt.geom.Rectangle2D;
 import java.awt.geom.AffineTransform;
 
-
 /**
  * Ein Stuhl, der manipuliert werden kann und sich selbst auf einer Leinwand zeichnet.
  * 
@@ -150,13 +149,37 @@ public class Stuhl
     /**
      * Bewege dieses Objekt um dx und dy Rastereinheiten
      */
-    public void move(int dx, int dy) {
+    public void move(int dx, int dy, boolean anim) throws InterruptedException {
         boolean onCanvas = Grid.isOnCanvas(xPosG + dx, yPosG + dy);
-        if(!onCanvas) return;
+        if(!onCanvas) { return; }
+        
+        if(anim){
+            int framerate = 30; // 30 Frames / sekunde
+            int frametime = Math.round(1000/framerate); // in milliseconds (thats why 1000)
+            float length = 1; // length in seconds
+            int totalFrames = Math.round (framerate * length);
+            System.out.println("rate: " + framerate + " time/f (ms): " + frametime + " length: " + length + " frames: " + totalFrames);
+            int framesDone = 0;
+            while(framesDone < totalFrames) {
+                // value from 0 to 1 (progress)
+                float factor = (float)framesDone / (float)totalFrames;
+                // lerp pixel functions
+                int px = Grid.lerpGridX(xPosG, xPosG + dx, factor);
+                int py = Grid.lerpGridY(yPosG, yPosG + dy, factor);
+                // move chair and draw
+                xPosition = px;
+                yPosition = py;
+                zeichne();
+                
+                // sleep for frametime
+                Thread.sleep(frametime);
+                framesDone++;
+            }
+        }
+        
         
         xPosG += dx;
         yPosG += dy;
-        
         xPosition = Grid.getX(xPosG);
         yPosition = Grid.getY(yPosG);
         zeichne();

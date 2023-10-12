@@ -1,4 +1,3 @@
-
 /**
  * The main class of the project
  *
@@ -7,27 +6,20 @@
  */
 public class Raumplaner
 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         System.out.println("Erstelle leinwand");
         Leinwand canvas = Leinwand.gibLeinwand();
         
         System.out.println("Erstelle Stuhl an G4|4");
-        Stuhl s1 = new Stuhl(4, 4);
+        Stuhl s1 = new Stuhl(1, 1);
         
         System.out.println("Zeige Stuhl");
         s1.zeige();
         
-        System.out.println("Bewege Stuhl um G3|3 (ePos: G7|7)");
-        s1.move(3, 3);
+        s1.move(3, 3, true);
         s1.inspect();
         
-        System.out.println("Bewege Stuhl um G1|1 (ePos: G8|8)");
-        s1.move(1, 1);
-        s1.inspect();
-        
-        System.out.println("Bewege Stuhl um G1|1 (ePos: G8|8)");
-        s1.move(1, 1);
-        s1.inspect();
-        
+        s1.move(-5, -4, true);
+        s1.inspect();        
     }
 }
