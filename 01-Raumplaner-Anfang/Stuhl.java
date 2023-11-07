@@ -148,6 +148,7 @@ public class Stuhl
     
     /**
      * Bewege dieses Objekt um dx und dy Rastereinheiten
+     * Wenn anim = true, wird Bewegung animiert
      */
     public void move(int dx, int dy, boolean anim) throws InterruptedException {
         boolean onCanvas = Grid.isOnCanvas(xPosG + dx, yPosG + dy);

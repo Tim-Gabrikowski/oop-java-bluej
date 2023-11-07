@@ -9,7 +9,7 @@ comment10.target=void\ bewegeHorizontal(int)
 comment10.text=\n\ Bewege\ dieses\ Objekt\ horizontal\ um\ 'entfernung'\ Bildschirmpunkte.\n
 comment11.params=dx\ dy\ anim
 comment11.target=void\ move(int,\ int,\ boolean)
-comment11.text=\n\ Bewege\ dieses\ Objekt\ um\ dx\ und\ dy\ Rastereinheiten\n
+comment11.text=\n\ Bewege\ dieses\ Objekt\ um\ dx\ und\ dy\ Rastereinheiten\n\ Wenn\ anim\ \=\ true,\ wird\ Bewegung\ animiert\n
 comment12.params=entfernung
 comment12.target=void\ bewegeVertikal(int)
 comment12.text=\n\ Bewege\ dieses\ objekt\ vertikal\ um\ 'entfernung'\ Bildschirmpunkte.\n

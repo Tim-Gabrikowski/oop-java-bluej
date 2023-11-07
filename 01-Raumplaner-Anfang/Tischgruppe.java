@@ -13,7 +13,7 @@ public class Tischgruppe
     private Stuhl c3;
     private Stuhl c4;
     private Tisch t1;
-
+    
     /**
      * Constructor for objects of class Tischgruppe
      */
