@@ -1,18 +1,20 @@
 #BlueJ class context
 comment0.target=Grid
-comment0.text=\n\ Write\ a\ description\ of\ class\ Grid\ here.\n\n\ @author\ Tim\ Gabrikowski\n\ @version\ 05.10.2023\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Grid\ here.\r\n\r\n\ @author\ Tim\ Gabrikowski\r\n\ @version\ 05.10.2023\r\n
 comment1.params=w\ h\ u
 comment1.target=void\ setParams(int,\ int,\ int)
 comment2.params=uX
 comment2.target=int\ getX(int)
-comment2.text=\n\ @brief\ Calculate\ X\ position\ in\ Pixels\ given\ a\ x\ value\ in\ the\ grid\n\ @param\ uX\ X\ Position\ in\ Gridspace\n\ @return\ x\ Position\ in\ pixelspace\n
+comment2.text=\r\n\ @brief\ Calculate\ X\ position\ in\ Pixels\ given\ a\ x\ value\ in\ the\ grid\r\n\ @param\ uX\ X\ Position\ in\ Gridspace\r\n\ @return\ x\ Position\ in\ pixelspace\r\n
 comment3.params=uY
 comment3.target=int\ getY(int)
-comment3.text=\n\ @brief\ Calculate\ Y\ position\ in\ Pixels\ given\ a\ Y\ value\ in\ the\ grid\n\ @param\ uY\ Y\ Position\ in\ Gridspace\n\ @return\ y\ Position\ in\ pixelspace\n
+comment3.text=\r\n\ @brief\ Calculate\ Y\ position\ in\ Pixels\ given\ a\ Y\ value\ in\ the\ grid\r\n\ @param\ uY\ Y\ Position\ in\ Gridspace\r\n\ @return\ y\ Position\ in\ pixelspace\r\n
 comment4.params=gX\ gY
 comment4.target=boolean\ isOnCanvas(int,\ int)
 comment5.params=s\ e\ t
 comment5.target=int\ lerpGridX(int,\ int,\ float)
 comment6.params=s\ e\ t
 comment6.target=int\ lerpGridY(int,\ int,\ float)
-numComments=7
+comment7.params=x
+comment7.target=float\ quadr(float)
+numComments=8

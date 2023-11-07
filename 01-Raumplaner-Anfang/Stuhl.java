@@ -155,13 +155,12 @@ public class Stuhl
         if(!onCanvas) { return; }
         
         if(anim){
-            int framerate = 30; // 30 Frames / sekunde
+            int framerate = 60; // 30 Frames / sekunde
             int frametime = Math.round(1000/framerate); // in milliseconds (thats why 1000)
-            float length = 1; // length in seconds
-            int totalFrames = Math.round (framerate * length);
-            System.out.println("rate: " + framerate + " time/f (ms): " + frametime + " length: " + length + " frames: " + totalFrames);
-            int framesDone = 0;
-            while(framesDone < totalFrames) {
+            float length = 2; // length in seconds
+            int totalFrames = Math.round(framerate * length);
+            
+            for( int framesDone = 0; framesDone < totalFrames; framesDone++) {
                 // value from 0 to 1 (progress)
                 float factor = (float)framesDone / (float)totalFrames;
                 // lerp pixel functions
@@ -174,7 +173,6 @@ public class Stuhl
                 
                 // sleep for frametime
                 Thread.sleep(frametime);
-                framesDone++;
             }
         }
         
@@ -218,7 +216,6 @@ public class Stuhl
               this,           // leinwand kennt das Objekt
               farbe,          // definiert seine Zeichenfarbe
               figur);         // definiert seinen grafischen Aspekt
-            leinwand.warte(10);
         }
     }
     

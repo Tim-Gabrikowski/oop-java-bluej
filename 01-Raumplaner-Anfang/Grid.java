@@ -47,7 +47,7 @@ public class Grid
         // calculate delta
         int delta = pE-pS;
         // to now get the point we need to find the delta from the start at a given t
-        return pS + Math.round(delta * t);
+        return pS + Math.round(delta * quadr(t));
     }
     public static int lerpGridY(int s, int e, float t) {
         // calculate the pixel Xs      
@@ -56,6 +56,10 @@ public class Grid
         // calculate delta
         int delta = pE-pS;
         // to now get the point we need to find the delta from the start at a given t
-        return pS + Math.round(delta * t);
+        return pS + Math.round(delta * quadr(t));
+    }
+    
+    private static float quadr(float x) {
+        return -1*x*x + 2*x;
     }
 }
