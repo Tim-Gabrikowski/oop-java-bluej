@@ -39,6 +39,9 @@ public class Grid
     public static boolean isOnCanvas(int gX, int gY) {
         return (gX*unitSizeX <= cWidth) && (gY*unitSizeY <= cHeight) && (gX >= 0) && (gY >= 0);
     }
+    public static boolean isOnCanvas(int gX, int gY, int w, int h) {
+        return (gX*unitSizeX + w <= cWidth) && (gY*unitSizeY + h <= cHeight) && (gX >= 0) && (gY >= 0);
+    }
     
     public static int lerpGridX(int s, int e, float t) {      
         // calculate the pixel Xs      

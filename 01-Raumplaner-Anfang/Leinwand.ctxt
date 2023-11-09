@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=Leinwand
-comment0.text=\r\n\ Leinwand\ ist\ eine\ Klasse,\ die\ einfache\ Zeichenoperationen\ auf\ einer\r\n\ leinwandartigen\ Zeichenflaeche\ ermoeglicht.\r\n\ Sie\ ist\ eine\ vereinfachte\ Version\ der\ Klasse\ Canvas\ (englisch\ fuer\ \r\n\ Leinwand)\ des\ JDK\ und\ wurde\ speziell\ fuer\ das\ Projekt\ "Figuren"\r\n\ geschrieben.\r\n\ \r\n\r\n\ @author\:\ Bruce\ Quig\r\n\ @author\:\ Michael\ Koelling\ (mik)\r\n\ @author\:\ Axel\ Schmolitzky\r\n\ \r\n\ @author\:\ Aenderungen\ von\r\n\ @Java-MS\ Groupies\r\n\ @hier\:\ Uwe\ Debacher\r\n\r\n\ @version\:\ 1.7\ (5.12.2003)\r\n
+comment0.text=\n\ Leinwand\ ist\ eine\ Klasse,\ die\ einfache\ Zeichenoperationen\ auf\ einer\n\ leinwandartigen\ Zeichenflaeche\ ermoeglicht.\n\ Sie\ ist\ eine\ vereinfachte\ Version\ der\ Klasse\ Canvas\ (englisch\ fuer\ \n\ Leinwand)\ des\ JDK\ und\ wurde\ speziell\ fuer\ das\ Projekt\ "Figuren"\n\ geschrieben.\n\ \n\n\ @author\:\ Bruce\ Quig\n\ @author\:\ Michael\ Koelling\ (mik)\n\ @author\:\ Axel\ Schmolitzky\n\ \n\ @author\:\ Aenderungen\ von\n\ @Java-MS\ Groupies\n\ @hier\:\ Uwe\ Debacher\n\n\ @version\:\ 1.7\ (5.12.2003)\n
 comment1.params=
 comment1.target=Leinwand\ gibLeinwand()
-comment1.text=\r\n\ Fabrikmethode,\ die\ eine\ Referenz\ auf\ das\ einzige\ Exemplar\r\n\ dieser\ Klasse\ zur\uFFFDckliefert.\ Wenn\ es\ von\ einer\ Klasse\ nur\r\n\ genau\ ein\ Exemplar\ gibt,\ wird\ dieses\ als\ 'Singleton'\r\n\ bezeichnet.\r\n
+comment1.text=\n\ Fabrikmethode,\ die\ eine\ Referenz\ auf\ das\ einzige\ Exemplar\n\ dieser\ Klasse\ zur\uFFFDckliefert.\ Wenn\ es\ von\ einer\ Klasse\ nur\n\ genau\ ein\ Exemplar\ gibt,\ wird\ dieses\ als\ 'Singleton'\n\ bezeichnet.\n
 comment2.params=titel\ breite\ hoehe\ grundfarbe\ units
 comment2.target=Leinwand(java.lang.String,\ int,\ int,\ java.awt.Color,\ int)
 comment3.params=sichtbar

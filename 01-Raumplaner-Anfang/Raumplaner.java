@@ -17,9 +17,6 @@ public class Raumplaner
         s1.zeige();
         
         s1.move(3, 3, true);
-        s1.inspect();
-        
-        s1.move(-5, -4, true);
-        s1.inspect();        
+        s1.inspect();       
     }
 }
