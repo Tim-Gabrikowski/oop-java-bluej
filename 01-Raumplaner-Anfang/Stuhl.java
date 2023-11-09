@@ -157,7 +157,7 @@ public class Stuhl
         if(anim){
             int framerate = 60; // 30 Frames / sekunde
             int frametime = Math.round(1000/framerate); // in milliseconds (thats why 1000)
-            float length = 2; // length in seconds
+            float length = 4; // length in seconds
             int totalFrames = Math.round(framerate * length);
             
             for( int framesDone = 0; framesDone < totalFrames; framesDone++) {
