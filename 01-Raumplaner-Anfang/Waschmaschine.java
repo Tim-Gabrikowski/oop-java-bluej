@@ -12,7 +12,7 @@ import java.awt.geom.AffineTransform;
  * Tim was here
  * And here
  */
-public class Badewanne
+public class Waschmaschine
 {
     private int xPosition;
     private int yPosition;
@@ -25,7 +25,7 @@ public class Badewanne
     private int tiefe;
 
 
-    public Badewanne(int gx, int gy, int o){
+    public Waschmaschine(int gx, int gy, int o){
         xPosition = Grid.getX(gx);
         yPosition = Grid.getY(gy);
         xPosG = gx;
@@ -33,12 +33,12 @@ public class Badewanne
         farbe = "gruen";
         orientierung = o;
         istSichtbar = false;
-        breite = 180;
-        tiefe  = 80;        
+        breite = 60;
+        tiefe  = 60;        
     }
     
     public void inspect() {
-        System.out.println("badewanne bei G" + xPosG + "|" + yPosG + " P" + xPosition + "|" + yPosition);
+        System.out.println("waschmaschine bei G" + xPosG + "|" + yPosG + " P" + xPosition + "|" + yPosition);
     }
 
     public void zeige() {
@@ -112,38 +112,28 @@ public class Badewanne
     }
     
     private Shape gibAktuelleFigur() {
-        int wallThickness = 5;
-        int holeDiameter = 5;
-        
+        int bigDia = 50;
+        int smallDia = 5;
         // einen GeneralPath definieren
-        GeneralPath badewanne = new GeneralPath();
+        GeneralPath waschmaschine = new GeneralPath();
         
         // outline
         Rectangle2D outline = new Rectangle2D.Double(0, 0, breite, tiefe);
-        badewanne.append(outline, false);
+        waschmaschine.append(outline, false);
+                
+        // bigC
+        Ellipse2D bigC = new Ellipse2D.Double((breite - bigDia) / 2, (tiefe - bigDia) / 2, bigDia, bigDia);
+        waschmaschine.append(bigC, false);
         
-        // Lines
-        Line2D lTop = new Line2D.Double(wallThickness, wallThickness, breite - wallThickness - ((tiefe - (wallThickness * 2)) / 2), wallThickness);
-        Line2D lBottom = new Line2D.Double(wallThickness, tiefe - wallThickness, breite - wallThickness - ((tiefe - (wallThickness * 2)) / 2), tiefe - wallThickness);
-        Line2D lSite = new Line2D.Double(wallThickness, wallThickness, wallThickness, tiefe - wallThickness);
-    
-        badewanne.append(lTop, false);
-        badewanne.append(lBottom, false);
-        badewanne.append(lSite, false);
-        
-        // Arc
-        Arc2D arc = new Arc2D.Double(breite - wallThickness - (tiefe - wallThickness*2), wallThickness, tiefe - (wallThickness * 2), tiefe - (wallThickness * 2), -90, 180, 0);
-        badewanne.append(arc, false);
-        
-        // hole
-        Ellipse2D hole = new Ellipse2D.Double(wallThickness * 2, (tiefe / 2) - (holeDiameter / 2), holeDiameter, holeDiameter);
-        badewanne.append(hole, false);
+        // smallC
+        Ellipse2D smallC = new Ellipse2D.Double((breite - smallDia) / 2, (tiefe - smallDia) / 2, smallDia, smallDia);
+        waschmaschine.append(smallC, false);
         
         // transformieren:
         AffineTransform t = new AffineTransform();
         t.translate(xPosition, yPosition);
-        Rectangle2D umriss = badewanne.getBounds2D();
+        Rectangle2D umriss = waschmaschine.getBounds2D();
         t.rotate(Math.toRadians(orientierung), umriss.getX() + umriss.getWidth()/2, umriss.getY() + umriss.getHeight()/2);
-        return  t.createTransformedShape(badewanne);
+        return  t.createTransformedShape(waschmaschine);
     }
 }
