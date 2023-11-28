@@ -1,7 +1,6 @@
 import java.awt.Shape;
 import java.awt.geom.GeneralPath;
 import java.awt.geom.Rectangle2D;
-import java.awt.geom.AffineTransform;
 
 
 /**
@@ -15,10 +14,10 @@ public class Stuhl extends Furniture
 {
     public Stuhl (int x, int y, int o) {
         super(x, y, o);
-        breite = 120;
-        tiefe = 80;
+        breite = 60;
+        tiefe = 60;
     }
-    protected Shape gibAktuelleFigur()
+    protected GeneralPath gibAktuelleFigur()
     {
         
         GeneralPath stuhl = new GeneralPath();
@@ -31,10 +30,6 @@ public class Stuhl extends Furniture
         stuhl.moveTo(0 , (breite/10+1));
         stuhl.lineTo(breite, (breite/10+1));    
         
-        AffineTransform t = new AffineTransform();
-        t.translate(xPosition, yPosition);
-        Rectangle2D umriss = stuhl.getBounds2D();
-        t.rotate(Math.toRadians(rotation),umriss.getX()+umriss.getWidth()/2,umriss.getY()+umriss.getHeight()/2);
-        return  t.createTransformedShape(stuhl);
+        return stuhl;
     }
 }

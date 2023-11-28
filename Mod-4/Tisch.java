@@ -1,5 +1,5 @@
 import java.awt.Shape;
-import java.awt.geom.AffineTransform;
+import java.awt.geom.GeneralPath;
 import java.awt.geom.Rectangle2D;
 import java.awt.geom.Ellipse2D;
 
@@ -16,16 +16,10 @@ public class Tisch extends Furniture
         breite = 120;
         tiefe = 80;
     }
-    protected Shape gibAktuelleFigur()
+    protected GeneralPath gibAktuelleFigur()
     {
-        // definieren
-        Shape tisch = new Ellipse2D.Double(0 , 0, breite, tiefe);
-        
-        // transformieren
-        AffineTransform t = new AffineTransform();
-        t.translate(xPosition, yPosition);
-        Rectangle2D umriss = tisch.getBounds2D();
-        t.rotate(Math.toRadians(rotation),umriss.getX()+umriss.getWidth()/2,umriss.getY()+umriss.getHeight()/2);
-        return  t.createTransformedShape(tisch);
+        GeneralPath tisch = new GeneralPath();
+        tisch.append(new Ellipse2D.Double(0 , 0, breite, tiefe), false);
+        return tisch;
     }
 }

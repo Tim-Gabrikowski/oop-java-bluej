@@ -4,5 +4,5 @@ comment0.text=\n\ Ein\ Tisch,\ der\ manipuliert\ werden\ kann\ und\ sich\ selbst
 comment1.params=x\ y\ o
 comment1.target=Tisch(int,\ int,\ int)
 comment2.params=
-comment2.target=java.awt.Shape\ gibAktuelleFigur()
+comment2.target=java.awt.geom.GeneralPath\ gibAktuelleFigur()
 numComments=3

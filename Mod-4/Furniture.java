@@ -1,4 +1,7 @@
 import java.awt.Shape;
+import java.awt.geom.GeneralPath;
+import java.awt.geom.Rectangle2D;
+import java.awt.geom.AffineTransform;
 /**
  * Write a description of class Furniture here.
  *
@@ -29,7 +32,7 @@ public abstract class Furniture
         istSichtbar = false;
     }
 
-    protected abstract Shape gibAktuelleFigur();
+    protected abstract GeneralPath gibAktuelleFigur();
     
     public void inspect() {
         System.out.println("Furniture G" + xPosG + "|" + yPosG + " P" + xPosition + "|" + yPosition);
@@ -89,7 +92,8 @@ public abstract class Furniture
     
     private void zeichne() {
         if (istSichtbar) {
-            Shape figur = gibAktuelleFigur();
+            GeneralPath path = gibAktuelleFigur();
+            Shape figur = transform(path);
             Leinwand leinwand = Leinwand.gibLeinwand();
             leinwand.zeichne (
               this,           // leinwand kennt das Objekt
@@ -103,5 +107,12 @@ public abstract class Furniture
             Leinwand leinwand = Leinwand.gibLeinwand();
             leinwand.entferne(this);
         }
+    }
+    private Shape transform(GeneralPath furniture){
+        AffineTransform t = new AffineTransform();
+        t.translate(xPosition, yPosition);
+        Rectangle2D umriss = furniture.getBounds2D();
+        t.rotate(Math.toRadians(rotation),umriss.getX()+umriss.getWidth()/2,umriss.getY()+umriss.getHeight()/2);
+        return  t.createTransformedShape(furniture);
     }
 }
