@@ -17,7 +17,7 @@ public class Stuhl extends Furniture
         breite = 60;
         tiefe = 60;
     }
-    protected GeneralPath gibAktuelleFigur()
+    public GeneralPath gibAktuelleFigur()
     {
         
         GeneralPath stuhl = new GeneralPath();

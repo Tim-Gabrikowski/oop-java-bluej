@@ -16,7 +16,7 @@ public class Tisch extends Furniture
         breite = 120;
         tiefe = 80;
     }
-    protected GeneralPath gibAktuelleFigur()
+    public GeneralPath gibAktuelleFigur()
     {
         GeneralPath tisch = new GeneralPath();
         tisch.append(new Ellipse2D.Double(0 , 0, breite, tiefe), false);

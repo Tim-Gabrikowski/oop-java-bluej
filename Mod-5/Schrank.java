@@ -10,7 +10,7 @@ public class Schrank extends Furniture
         breite = 100;
         tiefe = 60;
     }
-    protected GeneralPath gibAktuelleFigur()
+    public GeneralPath gibAktuelleFigur()
     {
         GeneralPath schrank = new GeneralPath();
         schrank.append(new Rectangle2D.Double(0, 0, breite, tiefe), false);

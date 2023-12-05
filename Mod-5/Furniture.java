@@ -32,7 +32,7 @@ public abstract class Furniture
         istSichtbar = false;
     }
 
-    protected abstract GeneralPath gibAktuelleFigur();
+    public abstract GeneralPath gibAktuelleFigur();
     
     public void inspect() {
         System.out.println("Furniture G" + xPosG + "|" + yPosG + " P" + xPosition + "|" + yPosition);
@@ -88,6 +88,12 @@ public abstract class Furniture
     public void verberge() {
         loesche(); // "tue nichts" wird in loesche() abgefangen.
         istSichtbar = false;
+    }
+    public int getWidth() {
+        return breite;
+    }
+    public int getDepth() {
+        return tiefe;
     }
     
     private void zeichne() {
