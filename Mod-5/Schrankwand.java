@@ -19,6 +19,7 @@ public class Schrankwand extends Furniture
         
         tiefe = s1.getDepth();
         breite = s1.getWidth()*3;
+        zeige();
     }
     public GeneralPath gibAktuelleFigur()
     {
@@ -26,15 +27,15 @@ public class Schrankwand extends Furniture
         
         AffineTransform t1 = new AffineTransform();
         t1.translate(0, 0);
-        schrankwand.append(t1.createTransformedShape(s1.gibAktuelleFigur()), false);
+        schrankwand.append(t1.createTransformedShape( s1.gibAktuelleFigur() ), false);
         
         AffineTransform t2 = new AffineTransform();
         t2.translate(s2.getWidth(), 0);
-        schrankwand.append(t2.createTransformedShape(s2.gibAktuelleFigur()), false);
+        schrankwand.append(t2.createTransformedShape( s2.gibAktuelleFigur() ), false);
         
         AffineTransform t3 = new AffineTransform();
         t3.translate(s2.getWidth()*2, 0);
-        schrankwand.append(t3.createTransformedShape(s3.gibAktuelleFigur()), false);
+        schrankwand.append(t3.createTransformedShape( s3.gibAktuelleFigur() ), false);
         
         return schrankwand;
     }
