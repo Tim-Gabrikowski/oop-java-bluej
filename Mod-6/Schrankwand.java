@@ -3,7 +3,7 @@ import java.awt.geom.GeneralPath;
 import java.awt.geom.Rectangle2D;
 import java.awt.geom.Line2D;
 import java.awt.geom.AffineTransform;
-import java.util.ArrayList;
+import java.util.*;
 
 public class Schrankwand extends Furniture
 {
@@ -27,7 +27,8 @@ public class Schrankwand extends Furniture
         GeneralPath schrankwand = new GeneralPath();
         
         int i = 0;
-        for(Schrank s : boards) {
+        for(Iterator<Schrank> it = boards.iterator(); it.hasNext();) {
+            Schrank s = it.next();
             AffineTransform t = new AffineTransform();
             t.translate(s.getWidth() * i++, 0);
             schrankwand.append(t.createTransformedShape( s.gibAktuelleFigur() ), false);
