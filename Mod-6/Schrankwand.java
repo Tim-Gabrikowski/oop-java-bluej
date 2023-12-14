@@ -7,12 +7,12 @@ import java.util.*;
 
 public class Schrankwand extends Furniture
 {
-    private ArrayList<Schrank> boards;
+    private LinkedList<Schrank> boards;
     
     public Schrankwand (int x, int y, int o, int a) {
         super(x, y, o);
         
-        boards = new ArrayList<Schrank>();
+        boards = new LinkedList<Schrank>();
         
         for(int i = 0; i < a; ++i) {
             boards.add(new Schrank(x, y, o));
