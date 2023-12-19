@@ -1,5 +1,10 @@
 {
   "version": 0,
-  "timeEvents": [],
+  "timeEvents": [
+    {
+      "name": "hideTitle",
+      "targetTime": 1
+    }
+  ],
   "seed": 3981412390
 }
