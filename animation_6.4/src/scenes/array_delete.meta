@@ -1,0 +1,22 @@
+{
+  "version": 0,
+  "timeEvents": [
+    {
+      "name": "Delete entry",
+      "targetTime": 1
+    },
+    {
+      "name": "Gap",
+      "targetTime": 5.505926122390688
+    },
+    {
+      "name": "MoveRest",
+      "targetTime": 10.478014166872107
+    },
+    {
+      "name": "END SCENE",
+      "targetTime": 23.989439042577047
+    }
+  ],
+  "seed": 2659035901
+}

@@ -1,0 +1,34 @@
+{
+  "version": 0,
+  "timeEvents": [
+    {
+      "name": "Show Title",
+      "targetTime": 6.494140683403302
+    },
+    {
+      "name": "Show List",
+      "targetTime": 10.01141345644888
+    },
+    {
+      "name": "Show Detail",
+      "targetTime": 19.340130203617793
+    },
+    {
+      "name": "Add Entry",
+      "targetTime": 29.007303794221407
+    },
+    {
+      "name": "Init Value",
+      "targetTime": 31.6361273532509
+    },
+    {
+      "name": "Show arrow",
+      "targetTime": 33.92649406884569
+    },
+    {
+      "name": "END SCENE",
+      "targetTime": 39.674029844880245
+    }
+  ],
+  "seed": 555911577
+}
