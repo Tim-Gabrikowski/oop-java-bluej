@@ -107,5 +107,14 @@ export default makeScene2D(function* (view) {
 	yield* waitUntil("Show arrow");
 	yield* arrLists[arrLists.length - 1].ref().showArrow(1);
 
+	yield* waitUntil("delete");
+	yield* sequence(
+		0.25,
+		arrLists[2].ref().position.x(-600, 1),
+		arrLists[3].ref().position.x(-600, 1),
+		arrLists[4].ref().position.x(-600, 1),
+		newElemRef().position.x(-600, 1)
+	);
+
 	yield* waitUntil("END SCENE");
 });

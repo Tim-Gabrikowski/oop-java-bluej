@@ -26,8 +26,12 @@
       "targetTime": 33.92649406884569
     },
     {
+      "name": "delete",
+      "targetTime": 43.72935087805259
+    },
+    {
       "name": "END SCENE",
-      "targetTime": 39.674029844880245
+      "targetTime": 54.40068234315122
     }
   ],
   "seed": 555911577

@@ -1,0 +1,54 @@
+{
+  "version": 0,
+  "timeEvents": [
+    {
+      "name": "Insert Array",
+      "targetTime": 0.6
+    },
+    {
+      "name": "init",
+      "targetTime": 1.6
+    },
+    {
+      "name": "Insert size",
+      "targetTime": 2.6
+    },
+    {
+      "name": "FillArray",
+      "targetTime": 4.6
+    },
+    {
+      "name": "Read Array",
+      "targetTime": 5.6
+    },
+    {
+      "name": "Save Value",
+      "targetTime": 6.6
+    },
+    {
+      "name": "Save Value 2",
+      "targetTime": 7.6
+    },
+    {
+      "name": "Wt 1",
+      "targetTime": 9.6
+    },
+    {
+      "name": "Wt 2",
+      "targetTime": 10.6
+    },
+    {
+      "name": "Wt 3",
+      "targetTime": 11.6
+    },
+    {
+      "name": "Wt 4",
+      "targetTime": 12.6
+    },
+    {
+      "name": "END SCENE",
+      "targetTime": 13.6
+    }
+  ],
+  "seed": 998229674
+}

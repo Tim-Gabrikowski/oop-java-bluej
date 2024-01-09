@@ -24,13 +24,13 @@ export default makeScene2D(function* (view) {
 		<CodeBlock ref={codeRef} language="java" code={""} scale={2} />
 	);
 
-	yield* waitUntil("Insert Array");
+	yield* waitUntil("Import statement");
 	yield* codeRef().edit(1)`${insert("int[] zahlen;")}`;
 
-	yield* waitUntil("init");
+	yield* waitUntil("new list");
 	yield* codeRef().edit(1)`int[] zahlen${insert(" = new int[]")};`;
 
-	yield* waitUntil("Insert size");
+	yield* waitUntil("");
 	yield* codeRef().edit(1)`int[] zahlen = new int[${insert("5")}];`;
 	yield* codeRef().selection(range(0, 0, 1, 0), 1);
 
