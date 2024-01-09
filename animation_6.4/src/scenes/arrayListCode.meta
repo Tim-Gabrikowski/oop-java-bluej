@@ -2,15 +2,15 @@
   "version": 0,
   "timeEvents": [
     {
-      "name": "Insert Array",
+      "name": "Import statement",
       "targetTime": 0.6
     },
     {
-      "name": "init",
+      "name": "new list",
       "targetTime": 1.6
     },
     {
-      "name": "Insert size",
+      "name": "insert type",
       "targetTime": 2.6
     },
     {

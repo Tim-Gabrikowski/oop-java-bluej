@@ -30,42 +30,41 @@ export default makeScene2D(function* (view) {
 	yield* waitUntil("new list");
 	yield* codeRef().edit(1)`int[] zahlen${insert(" = new int[]")};`;
 
-	yield* waitUntil("");
+	yield* waitUntil("insert type");
 	yield* codeRef().edit(1)`int[] zahlen = new int[${insert("5")}];`;
 	yield* codeRef().selection(range(0, 0, 1, 0), 1);
 
-	yield* waitUntil("FillArray");
+	yield* waitUntil("construktor");
 	yield* codeRef().edit(
 		1
 	)`int[] zahlen = new int[5];${insert("\nzahlen = randomInts();")}`;
 
-	yield* waitUntil("Read Array");
+	yield* waitUntil("constructor type");
 	yield* codeRef().edit(
 		1
 	)`int[] zahlen = new int[5]; \nzahlen = randomInts();${insert("\nint a = zahlen[2];")}`;
 
-	yield* waitUntil("Save Value");
+	yield* waitUntil("add element");
 	yield* codeRef().edit(
 		1
 	)`int[] zahlen = new int[5]; \nzahlen = randomInts();\nint a = zahlen[2];${insert("\nzahlen[3];")}`;
 
-	yield* waitUntil("Save Value 2");
+	yield* waitUntil("get element");
 	yield* codeRef().edit(
 		1
 	)`int[] zahlen = new int[5]; \nzahlen = randomInts();\nint a = zahlen[2];\nzahlen[3]${insert(" = 42")};`;
 	yield* codeRef().selection(range(0, 0, 5, 0), 1);
 
-	yield* waitUntil("Wt 1");
+	yield* waitUntil("Wset element");
 	yield* codeRef().selection(range(0, 0, 1, 0), 1);
 
-	yield* waitUntil("Wt 2");
+	yield* waitUntil("remove element");
 	yield* codeRef().selection(range(1, 0, 2, 0), 1);
 
-	yield* waitUntil("Wt 3");
+	yield* waitUntil("for loop");
 	yield* codeRef().selection(range(2, 0, 3, 0), 1);
 
-	yield* waitUntil("Wt 4");
-	yield* codeRef().selection(range(3, 0, 4, 0), 1);
+	// FOR LOOP STUFF
 
 	yield* waitUntil("END SCENE");
 });
