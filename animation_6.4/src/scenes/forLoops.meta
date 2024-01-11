@@ -1,0 +1,34 @@
+{
+  "version": 0,
+  "timeEvents": [
+    {
+      "name": "empty for",
+      "targetTime": 0.6
+    },
+    {
+      "name": "elements in for",
+      "targetTime": 1.6
+    },
+    {
+      "name": "extended for",
+      "targetTime": 2.6
+    },
+    {
+      "name": "for var",
+      "targetTime": 3.6
+    },
+    {
+      "name": "for list",
+      "targetTime": 4.6
+    },
+    {
+      "name": "print elem",
+      "targetTime": 5.6
+    },
+    {
+      "name": "END SCENE",
+      "targetTime": 6.6
+    }
+  ],
+  "seed": 2530198123
+}

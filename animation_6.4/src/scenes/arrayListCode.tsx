@@ -25,46 +25,48 @@ export default makeScene2D(function* (view) {
 	);
 
 	yield* waitUntil("Import statement");
-	yield* codeRef().edit(1)`${insert("int[] zahlen;")}`;
+	yield* codeRef().edit(1)`${insert("import java.util.ArrayList;")}`;
 
 	yield* waitUntil("new list");
-	yield* codeRef().edit(1)`int[] zahlen${insert(" = new int[]")};`;
+	yield* codeRef().edit(
+		1
+	)`import java.util.ArrayList;${insert("\nArrayList<> list;")}`;
 
 	yield* waitUntil("insert type");
-	yield* codeRef().edit(1)`int[] zahlen = new int[${insert("5")}];`;
-	yield* codeRef().selection(range(0, 0, 1, 0), 1);
+	yield* codeRef().edit(
+		1
+	)`import java.util.ArrayList;\nArrayList<${insert("int")}> list;`;
 
 	yield* waitUntil("construktor");
 	yield* codeRef().edit(
 		1
-	)`int[] zahlen = new int[5];${insert("\nzahlen = randomInts();")}`;
+	)`import java.util.ArrayList;\nArrayList<int> list${insert(" = new ArrayList<>()")};`;
 
 	yield* waitUntil("constructor type");
 	yield* codeRef().edit(
 		1
-	)`int[] zahlen = new int[5]; \nzahlen = randomInts();${insert("\nint a = zahlen[2];")}`;
+	)`import java.util.ArrayList;\nArrayList<int> list = new ArrayList<${insert("int")}>();`;
+	yield* codeRef().selection(range(1, 0, 2, 0), 1);
 
 	yield* waitUntil("add element");
 	yield* codeRef().edit(
 		1
-	)`int[] zahlen = new int[5]; \nzahlen = randomInts();\nint a = zahlen[2];${insert("\nzahlen[3];")}`;
+	)`import java.util.ArrayList;\nArrayList<int> list = new ArrayList<int>();${insert("\nlist.add(5);\nlist.add(10);\nlist.add(19);")}`;
 
 	yield* waitUntil("get element");
 	yield* codeRef().edit(
 		1
-	)`int[] zahlen = new int[5]; \nzahlen = randomInts();\nint a = zahlen[2];\nzahlen[3]${insert(" = 42")};`;
-	yield* codeRef().selection(range(0, 0, 5, 0), 1);
+	)`import java.util.ArrayList;\nArrayList<int> list = new ArrayList<int>();\nlist.add(5);\nlist.add(10);\nlist.add(19);${insert("\nint a = list.get(0);")}`;
 
-	yield* waitUntil("Wset element");
-	yield* codeRef().selection(range(0, 0, 1, 0), 1);
+	yield* waitUntil("set element");
+	yield* codeRef().edit(
+		1
+	)`import java.util.ArrayList;\nArrayList<int> list = new ArrayList<int>();\nlist.add(5);\nlist.add(10);\nlist.add(19);\nint a = list.get(0);${insert("\nlist.set(1, 16);")}`;
 
 	yield* waitUntil("remove element");
-	yield* codeRef().selection(range(1, 0, 2, 0), 1);
-
-	yield* waitUntil("for loop");
-	yield* codeRef().selection(range(2, 0, 3, 0), 1);
-
-	// FOR LOOP STUFF
+	yield* codeRef().edit(
+		1
+	)`import java.util.ArrayList;\nArrayList<int> list = new ArrayList<int>();\nlist.add(5);\nlist.add(10);\nlist.add(19);\nint a = list.get(0);\nlist.set(1, 16);${insert("\nlist.remove(2);")}`;
 
 	yield* waitUntil("END SCENE");
 });
