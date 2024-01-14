@@ -3,43 +3,43 @@
   "timeEvents": [
     {
       "name": "Import statement",
-      "targetTime": 0.6
+      "targetTime": 8.63377633061988
     },
     {
       "name": "new list",
-      "targetTime": 1.6
+      "targetTime": 17.402478822919814
     },
     {
       "name": "insert type",
-      "targetTime": 2.6
+      "targetTime": 29.005432355717616
     },
     {
       "name": "construktor",
-      "targetTime": 3.6
+      "targetTime": 39.833554668810976
     },
     {
       "name": "constructor type",
-      "targetTime": 4.6
+      "targetTime": 42.179314155666084
     },
     {
       "name": "add element",
-      "targetTime": 6.6
+      "targetTime": 53.39572761109803
     },
     {
       "name": "get element",
-      "targetTime": 7.6
+      "targetTime": 61.12102368154184
     },
     {
       "name": "set element",
-      "targetTime": 8.6
+      "targetTime": 73.28419542741678
     },
     {
       "name": "remove element",
-      "targetTime": 9.6
+      "targetTime": 81.98719585722715
     },
     {
       "name": "END SCENE",
-      "targetTime": 11.6
+      "targetTime": 88.39479503364271
     }
   ],
   "seed": 998229674

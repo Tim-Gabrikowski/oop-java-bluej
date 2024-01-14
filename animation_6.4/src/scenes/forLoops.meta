@@ -3,31 +3,35 @@
   "timeEvents": [
     {
       "name": "empty for",
-      "targetTime": 0.6
+      "targetTime": 3.6894386750576396
     },
     {
       "name": "elements in for",
-      "targetTime": 1.6
+      "targetTime": 7.531722256110666
     },
     {
       "name": "extended for",
-      "targetTime": 2.6
+      "targetTime": 17.820634539117286
     },
     {
       "name": "for var",
-      "targetTime": 3.6
+      "targetTime": 25.78216968691383
     },
     {
       "name": "for list",
-      "targetTime": 4.6
+      "targetTime": 37.10992869345725
     },
     {
       "name": "print elem",
-      "targetTime": 5.6
+      "targetTime": 40.88475644747561
+    },
+    {
+      "name": "edit elem",
+      "targetTime": 46.44276024854109
     },
     {
       "name": "END SCENE",
-      "targetTime": 6.6
+      "targetTime": 60.38726934604291
     }
   ],
   "seed": 2530198123

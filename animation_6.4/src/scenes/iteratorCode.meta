@@ -1,0 +1,66 @@
+{
+  "version": 0,
+  "timeEvents": [
+    {
+      "name": "select index",
+      "targetTime": 4.832969495540511
+    },
+    {
+      "name": "select count",
+      "targetTime": 7.9536258389681835
+    },
+    {
+      "name": "undo selection",
+      "targetTime": 10.637544360916781
+    },
+    {
+      "name": "create iterator",
+      "targetTime": 18.01738256061842
+    },
+    {
+      "name": "it type",
+      "targetTime": 26.844498870437555
+    },
+    {
+      "name": "init iterator",
+      "targetTime": 41.84893315492105
+    },
+    {
+      "name": "empty while",
+      "targetTime": 47.505883046465804
+    },
+    {
+      "name": "while condition",
+      "targetTime": 51.367071159371875
+    },
+    {
+      "name": "currVar",
+      "targetTime": 63.463528638923954
+    },
+    {
+      "name": "currVar val",
+      "targetTime": 71.45449050649516
+    },
+    {
+      "name": "print",
+      "targetTime": 76.66382220282938
+    },
+    {
+      "name": "remove",
+      "targetTime": 81.04196661354648
+    },
+    {
+      "name": "ListIterator",
+      "targetTime": 86.70664271182687
+    },
+    {
+      "name": "set",
+      "targetTime": 94.16237766754686
+    },
+    {
+      "name": "END SCENE",
+      "targetTime": 98.9091391377446
+    }
+  ],
+  "seed": 3695373835
+}

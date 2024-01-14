@@ -14,6 +14,7 @@ import {
 	edit,
 	insert,
 	range,
+	remove,
 } from "@motion-canvas/2d/lib/components/CodeBlock";
 
 export default makeScene2D(function* (view) {
@@ -46,6 +47,18 @@ export default makeScene2D(function* (view) {
 	yield* codeRef().edit(
 		1
 	)`for(int i : list) {${insert("\n    System.out.println(i);\n")}}`;
+
+	yield* waitUntil("edit elem");
+	yield* codeRef().edit(
+		1
+	)`for(int i : list) {\n    System.out.println(i);\n${insert("    i = 10;\n")}}`;
+
+	yield* chain(
+		codeRef().edit(1)`for(int i : list) {\n    System.out.println(i);\n${remove(
+			"    i = 10;\n"
+		)}}`,
+		codeRef().selection(range(0, 0, 3, 0), 1)
+	);
 
 	yield* waitUntil("END SCENE");
 });
