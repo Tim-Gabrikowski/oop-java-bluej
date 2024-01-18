@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Schrankwand
+comment1.params=x\ y\ o\ a
+comment1.target=Schrankwand(int,\ int,\ int,\ int)
+comment2.params=
+comment2.target=java.awt.geom.GeneralPath\ gibAktuelleFigur()
+numComments=3
