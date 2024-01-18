@@ -9,6 +9,7 @@ public class Schrank extends Furniture
         super(x, y, o);
         breite = 100;
         tiefe = 60;
+        cost = 149.99;
     }
     public GeneralPath gibAktuelleFigur()
     {
@@ -17,5 +18,8 @@ public class Schrank extends Furniture
         schrank.append(new Line2D.Double(0 , 0, breite, tiefe), false);
         schrank.append(new Line2D.Double(0 , tiefe, breite, 0), false);
         return schrank;
+    }
+    public double cost(double hours) {
+        return cost;
     }
 }

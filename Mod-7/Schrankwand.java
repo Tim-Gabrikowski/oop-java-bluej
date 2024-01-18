@@ -36,4 +36,11 @@ public class Schrankwand extends Furniture
     
         return schrankwand;
     }
+    public double cost(double hours) {
+        double cost = 0;
+        for(Schrank s : boards) {
+            cost += s.cost(hours);
+        }
+        return cost;
+    }
 }

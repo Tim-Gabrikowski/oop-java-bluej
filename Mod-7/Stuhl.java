@@ -16,6 +16,7 @@ public class Stuhl extends Furniture
         super(x, y, o);
         breite = 60;
         tiefe = 60;
+        cost = 99.99;
     }
     public GeneralPath gibAktuelleFigur()
     {
@@ -31,5 +32,8 @@ public class Stuhl extends Furniture
         stuhl.lineTo(breite, (breite/10+1));    
         
         return stuhl;
+    }
+    public double cost(double hours) {
+        return cost;
     }
 }

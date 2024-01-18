@@ -20,6 +20,8 @@ public abstract class Furniture
     private boolean istSichtbar;
     protected int breite;
     protected int tiefe;
+    protected double cost;
+    protected double costHour;
     
     public Furniture(int x, int y, int o) {
         Leinwand lw = Leinwand.gibLeinwand();
@@ -30,9 +32,12 @@ public abstract class Furniture
         farbe = "blau";
         rotation = o;
         istSichtbar = false;
+        costHour = 30;
     }
 
     public abstract GeneralPath gibAktuelleFigur();
+    
+    public abstract double cost(double hours);
     
     public void inspect() {
         System.out.println("Furniture G" + xPosG + "|" + yPosG + " P" + xPosition + "|" + yPosition);

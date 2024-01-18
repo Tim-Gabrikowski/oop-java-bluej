@@ -15,11 +15,16 @@ public class Tisch extends Furniture
         super(x, y, o);
         breite = 120;
         tiefe = 80;
+        cost = 199.99;
+        costHour = 20;
     }
     public GeneralPath gibAktuelleFigur()
     {
         GeneralPath tisch = new GeneralPath();
         tisch.append(new Ellipse2D.Double(0 , 0, breite, tiefe), false);
         return tisch;
+    }
+    public double cost(double hours) {
+        return cost + (hours * costHour);
     }
 }

@@ -5,4 +5,6 @@ comment1.params=x\ y\ o
 comment1.target=Stuhl(int,\ int,\ int)
 comment2.params=
 comment2.target=java.awt.geom.GeneralPath\ gibAktuelleFigur()
-numComments=3
+comment3.params=hours
+comment3.target=double\ cost(double)
+numComments=4
