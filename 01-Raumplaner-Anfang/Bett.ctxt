@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Bett
-comment0.text=\n\ @author\ Claus\ Albowski\n\ @version\ 2.2\ \ (aug\ 07)\n\ Tim\ was\ here\n\ And\ here\n
+comment0.text=\r\n\ @author\ Claus\ Albowski\r\n\ @version\ 2.2\ \ (aug\ 07)\r\n\ Tim\ was\ here\r\n\ And\ here\r\n
 comment1.params=gx\ gy\ o
 comment1.target=Bett(int,\ int,\ int)
 comment2.params=

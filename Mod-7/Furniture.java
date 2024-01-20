@@ -2,13 +2,14 @@ import java.awt.Shape;
 import java.awt.geom.GeneralPath;
 import java.awt.geom.Rectangle2D;
 import java.awt.geom.AffineTransform;
+import java.util.ArrayList;
 /**
  * Write a description of class Furniture here.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
-public abstract class Furniture
+public abstract class Furniture implements Observable
 {
     // instance variables - replace the example below with your own
     protected int xPosition;
@@ -22,6 +23,7 @@ public abstract class Furniture
     protected int tiefe;
     protected double cost;
     protected double costHour;
+    private ArrayList<Observer> observers = new ArrayList<Observer>();
     
     public Furniture(int x, int y, int o) {
         Leinwand lw = Leinwand.gibLeinwand();
@@ -33,6 +35,25 @@ public abstract class Furniture
         rotation = o;
         istSichtbar = false;
         costHour = 30;
+    }
+    
+    @Override
+    public void notifyObservers() {
+        for(Observer o : observers) {
+            o.updateObservable(this); 
+        }
+    }
+    @Override
+    public void addObserver(Observer o) {
+        observers.add(o);
+    }
+    @Override
+    public void removeObserver(Observer o) {
+        observers.remove(o);
+    }
+    @Override
+    public Observable getInstance(){
+        return this;
     }
 
     public abstract GeneralPath gibAktuelleFigur();

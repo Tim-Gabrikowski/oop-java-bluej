@@ -69,6 +69,7 @@ public class Leinwand
   private Image leinwandImage;
   private List figuren;
   private Map figurZuShape; // Abbildung von Figuren zu Shapes
+  private PriceObserver priceObserver;
 
   /**
    * Erzeuge eine Leinwand.
@@ -90,6 +91,7 @@ public class Leinwand
     figurZuShape = new HashMap();
 
     Grid.setParams(breite, hoehe, units);
+    priceObserver = new PriceObserver();
 }
 
 
@@ -127,8 +129,9 @@ public class Leinwand
    * @param  shape  ein Objekt der Klasse Shape, das tats�chlich
    *                 gezeichnet wird
    */
-  public void zeichne(Object figur, String farbe, Shape shape)
+  public void zeichne(Furniture figur, String farbe, Shape shape)
   {
+    priceObserver.addObservable(figur);
     figuren.remove(figur); // entfernen, falls schon eingetragen
     figuren.add(figur); // am Ende hinzuf�gen
     figurZuShape.put(figur, new ShapeMitFarbe(shape, farbe));
@@ -139,8 +142,9 @@ public class Leinwand
    * Entferne die gegebene Figur von der Leinwand.
    * @param  figur  die Figur, deren Shape entfernt werden soll
    */
-  public void entferne(Object figur)
+  public void entferne(Furniture figur)
   {
+    priceObserver.removeObservable(figur);
     figuren.remove(figur); // entfernen,falls schon eingetragen
     figurZuShape.remove(figur);
     erneutZeichnen();

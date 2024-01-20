@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Schrank
-comment0.text=\n\ Ein\ Schrank,\ der\ manipuliert\ werden\ kann\ und\ sich\ selbst\ auf\ einer\ Leinwand\ zeichnet.\n\ \n\ @author\ Claus\ Albowski\n\ @version\ 2.2\ \ (aug\ 07)\n\ Tim\ was\ here\n\ And\ here\n
+comment0.text=\r\n\ Ein\ Schrank,\ der\ manipuliert\ werden\ kann\ und\ sich\ selbst\ auf\ einer\ Leinwand\ zeichnet.\r\n\ \r\n\ @author\ Claus\ Albowski\r\n\ @version\ 2.2\ \ (aug\ 07)\r\n\ Tim\ was\ here\r\n\ And\ here\r\n
 comment1.params=gx\ gy\ o
 comment1.target=Schrank(int,\ int,\ int)
 comment2.params=

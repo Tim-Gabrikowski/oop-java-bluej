@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Observer
+comment0.text=\r\n\ @author\ Tim\ Gabrikowski\r\n\ @version\ 20.01.2024\r\n
+comment1.params=o
+comment1.target=void\ updateObservable(Observable)
+comment2.params=o
+comment2.target=void\ addObservable(Observable)
+comment3.params=o
+comment3.target=void\ removeObservable(Observable)
+numComments=4
