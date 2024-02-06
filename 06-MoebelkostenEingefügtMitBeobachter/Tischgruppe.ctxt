@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Tischgruppe
+comment0.text=\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Tischgruppe.\n\ \n\ @author\ (Ihr\ Name)\ \n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\n
+comment1.params=
+comment1.target=Tischgruppe()
+comment2.params=
+comment2.target=double\ gesamtKostenTischgruppe()
+numComments=3

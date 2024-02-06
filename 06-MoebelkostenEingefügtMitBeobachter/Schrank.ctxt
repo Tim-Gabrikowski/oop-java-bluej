@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Schrank
+comment0.text=\n\ Ein\ Schrank,\ der\ manipuliert\ werden\ kann\ und\ sich\ selbst\ auf\ einer\ Leinwand\ zeichnet.\n\ \n\ @author\ Java-MS\ Groupies\n\ hier\ claus\ albowski\n\ Michael\ K\u00F6lling\ und\ David\ J.\ Barnes\ und\ Axel\ Schmolitzky\n\ @version\ 1.2\ \ (25.02.04)\n
+comment1.params=x\ y\ f\ o\ b\ t
+comment1.target=Schrank(int,\ int,\ java.lang.String,\ int,\ int,\ int)
+comment1.text=\n\ Erzeuge\ einen\ neuen\ Schrank.\n
+comment2.params=
+comment2.target=double\ kosten()
+comment3.params=
+comment3.target=java.awt.Shape\ gibAktuelleFigur()
+comment3.text=\n\ Berechnet\ das\ zu\ zeichnende\ Shape\ anhand\ der\ gegebenen\ Daten\n
+numComments=4
